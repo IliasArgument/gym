@@ -1,0 +1,44 @@
+Интересное!
+
+ <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+
+1.margin--> margin-right, margin-bottom, правило margin.!!!
+
+2.првило заголовков, h1, h2, h3, h4 - good. h1, h4 - bad !!!
+
+3.backgrond-image: url() фоновый цвет; !!! будет появляться пока не загрузилась картинка
+
+4.в некоторых случая удобно задавать в кнопке - иконку в псевдоелементе ::before
+чтобы получить адаптиный дочерний елемент, в случае например иконки в псевдоелементе,
+можно задать ему размеры в
+em- размер шрифта дочернего / на размер родителя = число em
+а также нестандартное значение display: inline-blocks чтобы подействовали заданые размеры
+также целесообразно будет и margin задавать в em!!!
+
+5.BEM, для удобства добавлять утилитарные классы, к кнопке можен его добавть чтобы добавить характерные признаки или к тексту
+  class="calculate-button button transparent"
+
+
+6. width: 100%;
+  height: aspect-ratio: 1; пропорционально ширине
+  
+7.Для адаптива title ... 
+  60 / 1920 * 100 = 3.12vw 
+  font-size: clamp(20px, 3.12vw, 40px);
+
+      svg *[fill] { fill: currentColor }
+      svg *[stroke] { stroke: currentColor }
+
+      a,
+      button,
+      input,
+      textarea,
+      svg * {
+        transition-duration: var(--transition-duration);
+      }
+      /* если не применется анимация к иконке */
+
+      svg * {
+        transition-property: fill, stroke;
+      }
